@@ -1,0 +1,92 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+
+
+
+.sprite-- {
+    width: 12px;
+    height: 3px;
+    background-position: -5px -5px;
+}
+
+.sprite-2stars {
+    width: 42px;
+    height: 17px;
+    background-position: -27px -5px;
+}
+
+.sprite-3stars {
+    width: 65px;
+    height: 17px;
+    background-position: -79px -5px;
+}
+
+.sprite-4stars- {
+    width: 89px;
+    height: 17px;
+    background-position: -5px -32px;
+}
+
+.sprite-Layer-11 {
+    width: 64px;
+    height: 76px;
+    background-position: -104px -32px;
+}
+
+.sprite-Layer-12 {
+    width: 75px;
+    height: 72px;
+    background-position: -5px -59px;
+}
+
+.sprite-Layer-13 {
+    width: 74px;
+    height: 70px;
+    background-position: -178px -5px;
+}
+
+.sprite-_ {
+    width: 11px;
+    height: 11px;
+    background-position: -154px -5px;
+}
+
+.sprite-calendar {
+    width: 21px;
+    height: 22px;
+    background-position: -178px -85px;
+}
+
+.sprite-checked {
+    width: 26px;
+    height: 22px;
+    background-position: -209px -85px;
+}
+
+.sprite-fb {
+    width: 10px;
+    height: 19px;
+    background-position: -245px -85px;
+}
+
+.sprite-telegr {
+    width: 17px;
+    height: 15px;
+    background-position: -178px -117px;
+}
+
+.sprite-unchecked {
+    width: 22px;
+    height: 22px;
+    background-position: -205px -117px;
+}
+
+.sprite-youtube {
+    width: 20px;
+    height: 16px;
+    background-position: -237px -117px;
+}
