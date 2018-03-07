@@ -86,7 +86,7 @@
 					<b>Заинтересовались?</b>
 					<p>Укажите предполагаемые даты поездки, и мы покажем вас лучшие предложения гостинниц в седоне
 					</p>
-					<div class="search-btn"><p>Поиск гостинниц в седоне</p></div>
+					<div class="search-btn-wrap"><a href="#" class="search-btn"  >Поиск гостинниц в седоне</a></div>
 				</div>	
 					<form class="form-booking">
 						<div class="input-line">
@@ -119,13 +119,13 @@
 								</div>
 							</div>	
 						</div>
-						<button class="form-btn-blue">Найти</button>
+						<button type="submit" class="form-btn-blue">Найти</button>
 					</form>
 				
 			</section>
 			<section class="map">
 				<div class="map-canvas">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591938.158762296!2d-111.94959381352574!3d34.95592605864562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ%2C+USA!5e0!3m2!1sen!2sru!4v1446837046152" allowfullscreen>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591938.158762296!2d-111.94959381352574!3d34.95592605864562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ%2C+USA!5e0!3m2!1sen!2sru!4v1446837046152" /*allowfullscreen*/>
 					</iframe>
 				</div>
 				<footer class="main-footer">
@@ -143,6 +143,36 @@
 			</section>
 		</main>
 	</div>	
+	<script type="text/javascript">
+		var link = document.querySelector(".search-btn");
+		var popup = document.querySelector(".form-booking");
+		var checkin = popup.querySelector("[name=checkin]");
+		var checkout = popup.querySelector("[name=checkout]");
+		var storage = localStorage.getItem("checkin");
+
+		link.addEventListener('click', function (event) {
+			event.preventDefault();
+			popup.classList.toggle("form-booking-show");
+			checkin.focus();
+			if(storage){
+				checkin.value = storage;
+				checkout.focus();
+			}else {
+				checkin.focus();
+			}
+		});
+
+		popup.addEventListener('submit', function (event){
+			if(!checkin.value || !checkout.value){
+			event.preventDefault();
+			console.log("введи что то");
+			 }else {
+				localStorage.setItem('checkin', "27 Августа");
+			}
+		});
+
+		
+	</script>
 	</body>
 
 </html>

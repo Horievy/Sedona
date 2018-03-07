@@ -176,8 +176,12 @@ body {
 	
 }
  
-.search {
+.form-booking {
 	display: none;
+}
+
+.form-booking-show {
+	display: block;
 }
 
  .search-hotel {
@@ -199,13 +203,22 @@ body {
  	margin-bottom: 52px;
  }
 
-.search-btn {display:inline-block;
- 	 	width: 573px;
+.search-btn  {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display:inline-block;
+ 	 width: 573px;
  	min-height: 87px;
  	background-color: rgb(96, 78, 67);
  	margin: 0;
- 	
  	padding: 30px 0;
+ 	text-decoration: none;
+ 	color: #fff;
+ 	text-transform: uppercase;
+ 	font-weight: bold;
+ 	font-size: 21px;
+ 	position: relative;
  }
 
  .search-btn p {
@@ -215,12 +228,20 @@ body {
 
 
 .form-booking {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	padding: 40px 55px;
 	margin: 0 auto;
 	background-color: #fff;
 	width: 573px;
 	min-height: 395px;
 	text-align: center;
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	transform: translate(-50%, 0);
+
 }
 .booking-minus-plus {
 	display: inline-block;
