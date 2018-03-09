@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<title>Hotel "Sedona"</title>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<!-- <link rel="stylesheet" href="css/social-likes_birman.css"> 
+			CSS файл соц кнопок -->
+		<!-- <link rel="stylesheet" href="css/fotorama.css"> Слайдер примео -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css"
 	</head>
@@ -125,7 +128,8 @@
 			</section>
 			<section class="map">
 				<div class="map-canvas">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591938.158762296!2d-111.94959381352574!3d34.95592605864562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ%2C+USA!5e0!3m2!1sen!2sru!4v1446837046152" /*allowfullscreen*/>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1679742.3888529367!2d-112.002569!3d34.686338!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b38c28b698d0d4a!2z0J3QsNGG0LjQvtC90LDQu9GM0L3Ri9C5INC30LDQv9C-0LLQtdC00L3QuNC6INCa0L7QutC-0L3QuNC90L4!5e0!3m2!1sru!2sru!4v1520506477877" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+						
 					</iframe>
 				</div>
 				<footer class="main-footer">
@@ -140,39 +144,35 @@
 				<a href="#"></a>
 			</div>
 		</footer>
+		<!--         СЕКЦИЯ ИКОНОК
+		<div class="social-likes" data-counters="no" data-title="Title">
+			<div class="facebook" title="Share link on Facebook">Facebook</div>
+			<div class="twitter" title="Share link on Twitter">Twitter</div>
+			<div class="plusone" title="Share link on Google+">Google+</div>
+		</div> -->
+
+
+		<!--       СЕКЦИЯ СЛАЙДЕРА
+
+		 <div class="fotorama slider" data-nav="thumbs" data-thumbheight="50px" data-thumbwidth="120px">
+		  <img  src="http://s.fotorama.io/1.jpg">
+		  <img src="http://s.fotorama.io/2.jpg">
+		  <img src="http://s.fotorama.io/3.jpg">
+		  <img src="http://s.fotorama.io/4.jpg">
+		  <img src="http://s.fotorama.io/5.jpg">
+		  <img src="http://s.fotorama.io/5.jpg">
+		  <img src="http://s.fotorama.io/4.jpg">
+		  <img src="http://s.fotorama.io/3.jpg">
+		  <img src="http://s.fotorama.io/2.jpg">
+		  <img src="http://s.fotorama.io/1.jpg">
+		</div> -->
 			</section>
 		</main>
 	</div>	
-	<script type="text/javascript">
-		var link = document.querySelector(".search-btn");
-		var popup = document.querySelector(".form-booking");
-		var checkin = popup.querySelector("[name=checkin]");
-		var checkout = popup.querySelector("[name=checkout]");
-		var storage = localStorage.getItem("checkin");
-
-		link.addEventListener('click', function (event) {
-			event.preventDefault();
-			popup.classList.toggle("form-booking-show");
-			checkin.focus();
-			if(storage){
-				checkin.value = storage;
-				checkout.focus();
-			}else {
-				checkin.focus();
-			}
-		});
-
-		popup.addEventListener('submit', function (event){
-			if(!checkin.value || !checkout.value){
-			event.preventDefault();
-			console.log("введи что то");
-			 }else {
-				localStorage.setItem('checkin', "27 Августа");
-			}
-		});
-
-		
-	</script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- <script src="js/fotorama.js"></script>  Слайдер -->
+	<!-- <script src="js/social-likes.min.js"></script> JS файл соц кнопки -->
+	<script src="js/script.js"></script>
 	</body>
 
 </html>

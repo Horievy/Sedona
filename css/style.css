@@ -172,26 +172,15 @@ body {
 
 }
 .advices-text:first-child {
-	padding:0 93px;
-	
+	padding:0 93px;	
 }
  
-.form-booking {
-	display: none;
-}
-
-.form-booking-show {
-	display: block;
-}
-
- .search-hotel {
- 	
+ .search-hotel {	
  	background-color: #fff;
  	text-align: center;
-
  }
- .search-hotel b {
 
+ .search-hotel b {
  	display: inline-block;
  	font-size: 30px;
  	margin-top: 55px;
@@ -199,7 +188,6 @@ body {
  }
 
  .search-hotel > p {
-
  	margin-bottom: 52px;
  }
 
@@ -241,7 +229,35 @@ body {
 	z-index: 2;
 	left: 50%;
 	transform: translate(-50%, 0);
+}
 
+.form-booking {
+	display: none;
+}
+
+.form-booking-show {
+	display: block;
+	animation: show 0.5s;
+}
+
+@keyframes show {
+	from {transform: translateX(-2000px);}
+	71% {transform: translateX(-45%);}
+	90% {transform: translateX(-52%);}
+	to {transform: translateX(-50%);}
+}
+
+
+
+@keyframes error{
+	from {transform: translateX(-50%);}
+	 30%, 50%, 90% {transform: translateX(-48%);}
+	 40%, 60%, 80% {transform: translateX(-52%);}
+	to {transform: translateX(-50%);}
+}
+
+.form-booking-error{
+	animation: error 0.4s;
 }
 .booking-minus-plus {
 	display: inline-block;
