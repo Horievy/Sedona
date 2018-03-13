@@ -22,6 +22,9 @@ body {
 	margin: 0 auto;
 }
 
+nav li .hotels-active{
+	color: #827167;
+}
 .container {
 	margin: 0 auto;
 }
@@ -198,7 +201,7 @@ body {
 	display:inline-block;
  	 width: 573px;
  	min-height: 87px;
- 	background-color: rgb(96, 78, 67);
+ 	background-color: #766357;
  	margin: 0;
  	padding: 30px 0;
  	text-decoration: none;
@@ -229,6 +232,7 @@ body {
 	z-index: 2;
 	left: 50%;
 	transform: translate(-50%, 0);
+	font-weight: bold;
 }
 
 .form-booking {
@@ -259,19 +263,162 @@ body {
 .form-booking-error{
 	animation: error 0.4s;
 }
-.booking-minus-plus {
-	display: inline-block;
-}
- .form-booking .input-line,
- .form-booking .form-btn-blue
- {
+
+ .form-booking .input-line{
  	padding: 15px 0;
  }
 
- .booking-minus-plus:last-child {
- 	padding-top: 30px;
+.form-booking input {
+	background-color: #f2f2f2;
+	font-weight: bold;
+	border: none;
+	font-size: 14px;
+	padding: 12px;
+	color: #000;
+	position: relative;
+}
+
+.input-line {
+	position: relative;
+}
+
+.form-booking input:hover{
+	background-color: #EBEBEB;
+}
+
+.form-booking input:focus {
+	outline: 2px solid #e5e5e5;
+	background-color: #fff;
+}
+input[type="text"]::-webkit-input-placeholder{
+	color: #000;
+}
+
+input[type="text"]::-moz-placeholder{
+	color: #000;
+}
+
+.form-booking-show label[for="ch1"]:after,
+.form-booking-show label[for="ch2"]:after {
+	content: "";
+	width: 21px;
+	height: 22px;
+	display: block;
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	z-index: 3;
+	background: url(../img/spritesheet.png) -178px -85px;
+}
+
+.form-booking-show label[for="ch1"]:hover:after,
+.form-booking-show label[for="ch2"]:hover:after{
+	background: url(../img/formsprites.png) -5px -39px;
+}
+
+.form-booking-show label[for="ch1"]:active:after,
+.form-booking-show label[for="ch2"]:active:after{
+	background: url(../img/formsprites.png) -5px -105px;
+}
+
+.booking-minus-plus input{
+	width: 91px;
+	text-align: center;
+}
+
+
+
+.booking-minus-plus .btn-grey {
+	position: absolute;
+	z-index: 3;
+	border: none;
+	background-color: red;
+	outline: none;
+}
+
+.booking-minus-plus .icon-minus {
+	background: url(../img/spritesheet.png) -5px -5px;
+	 width: 12px;
+    height: 3px;
+    top: 18px;
+    right: 93px;
+    outline: none;
+}
+
+.booking-minus-plus .icon-minus:hover {
+	background: url(../img/formsprites.png) -5px -5px;
+}
+
+.booking-minus-plus .icon-minus:active {
+	background: url(../img/formsprites.png) -5px -71px;
+}
+
+.booking-minus-plus .icon-plus {
+	background: url(../img/spritesheet.png) -154px -5px;
+	 width: 11px;
+    height: 11px;
+    top: 14px;
+    right: 10px;
+}
+
+.booking-minus-plus .icon-plus:hover {
+	background: url(../img/formsprites.png) -5px -18px;
+}
+
+.booking-minus-plus .icon-plus:active {
+	background: url(../img/formsprites.png) -5px -84px;
+}
+
+.booking-calendar {
+	width: 326px;
+	margin-left: 17px;
+}
+
+label[for="ch3"]{
+	margin-right: 40px;
+}
+label[for="ch4"]{
+	margin-right: 25px;
+}
+.booking-minus-plus:last-child {
+	margin-left: 47px;
+}
+
+.booking-minus-plus {
+	display: inline-block;
  	padding-bottom: 15px;
- }
+ 	position: relative;
+}
+
+.form-btn-blue {
+	border: none;
+	background-color: #81B3D2;
+	color: #fff;
+	font-size: 21px;
+	text-transform: uppercase;
+	font-family: inherit;
+	font-weight: bold;
+	margin-top: 25px;
+	padding: 0;
+}
+
+.form-btn-blue span {
+	display: inline-block;
+	padding: 18px 197px;
+}
+
+.form-btn-blue:hover {
+	background-color: #669EC0;
+}
+
+.form-btn-blue:active {
+	background-color: #5496BD;
+}
+.form-btn-blue span:active {
+	opacity: 0.3;
+}
+
+
 
 .map-canvas iframe {
 	-webkit-box-sizing: border-box;
@@ -492,7 +639,7 @@ input[type="checkbox"]:checked + label:before {
  	margin: 0;
  }
 
- /*Форма с кнопками (И заёбистым отступом)*/
+ /*Форма с кнопками */
  .filter-range {
  	display: block;
  	width: 330px;
@@ -654,17 +801,28 @@ input[type="checkbox"]:checked + label:before {
 	float: left;
 	font-size: 12px;
 	color: #81b3d2;
-
+	cursor: pointer;
 }
+
 .sorting li:first-child {
 	margin-right:40px;
 	color: #000;
+	cursor: default;
 }
 .sorting .inactive{
 	border-bottom: 1px dotted #81b3d2;
 }
-.sorting .inactive span {
-	opacity: 0.3;
+.inactive span {
+	color: #cfcfcf;
+}
+
+.inactive span:hover {
+	color: #81B3D2;
+}
+
+.inactive span:active,
+.sorting li:active {
+	color: #000;
 }
 
 .rating-filter {
@@ -708,9 +866,19 @@ input[type="checkbox"]:checked + label:before {
 	opacity: 1;
 }
 
+.rating-filter i:first-child:active:after {
+	border-bottom-color: #81B3D2;
+	opacity: 1;
+}
+
 .rating-filter i:nth-child(2):hover:after {
 	border-top-color: #000;
 }
+
+.rating-filter i:nth-child(2):active:after {
+	border-top-color: #81B3D2;	
+}
+
 
 		/*Список отелей*/
 
